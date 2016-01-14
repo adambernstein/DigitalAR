@@ -1,0 +1,62 @@
+/**** TEMPLATE OVERRIDES ***/
+/* uncomment for full width.
+body{background-color:#fff;}
+
+
+.content-wrapper .centered {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+.content-wrapper{
+	background-color:#fff;
+}
+*/
+
+.media {
+    display: none !important;
+}
+/*hide page header*/
+
+.page-header{
+	display:none;
+}
+
+/*main content area*/
+#content{
+	margin:0;
+	background:transparent;
+	border:none;
+}
+
+article .main-content p{
+	color:#fff;
+}
+
+.summary{
+	color:#fff;
+}
+
+article.base{
+	margin-top:-30px !important;
+}
+
+.interior.full-width article {
+    width: 100%;
+}
+
+.interior.full-width article .main-content {
+    width: 100%;
+}
+
+.interior article{
+	margin:0 !important;
+}
+
+.summary, .media{
+	margin:0 !important;
+}
+
+/**CUSTOM **/
