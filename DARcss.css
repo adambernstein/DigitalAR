@@ -60,3 +60,130 @@ article.base{
 }
 
 /**CUSTOM **/
+
+
+/**{font-family:Fira Sans;}
+
+* {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 11px;
+}
+*/
+
+
+.menu-container a {
+	text-decoration:none;
+}
+
+h2 {
+		line-height: 1em;
+		transition: all .3s ease;
+		
+}
+
+strong {
+		font-size: inherit;
+		font-weight: 700;
+}
+
+.contents-inactive, .box-item:visited h2,
+.box-item:hover h2, .box-item:active h2 {
+		color: rgb(255, 255, 255);
+		font-size: 3em;
+		line-height: .5em;
+}
+
+.contents-inactive {
+		color: rgba(255, 255, 255, .7);
+		font-size: 1.5em;
+		line-height: 1.1em;
+}
+/*set up flexboxes*/
+
+.overall-container {
+	position:relative;
+	width:99vw;
+	height:99vh;
+}
+
+.menu-container {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column nowrap;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: stretch;
+		height: 90vh;
+		width: 50%;
+		position:absolute;
+		/*right:1px;*/
+		
+}
+
+.menu-container > * {			
+		flex-grow: 1;
+		transition: flex-grow .3s ease;
+
+}
+
+.box-item {
+		
+		padding-left: 10px;
+}
+
+.box-item:focus, .box-item:visited, .box-item:active{
+		flex-grow: 25;
+		
+}
+
+.box-item:hover .contentArea{
+	/*display:block !important;*/
+	background:inherit;
+	color:#e86d1f;
+}
+
+#wego {
+		background-color: #E86D1F;
+		order: 1;
+}
+
+#housecalls {
+		background-color: #008EA0;
+		order: 2;
+}
+
+#healthsystems {
+		background-color: #F6BE00;
+		order: 3;
+}
+
+#westay {
+		background-color: #323372;
+		order: 4;
+}
+
+/*#westay:focus{
+	background-color:#555;
+}*/
+
+
+.box-item .contentArea  {
+		display: block;
+		position: absolute;
+		background: #555;
+		left:100%;
+		top:0;
+		min-width:20%;
+		width:100%;
+		max-width:100%;
+		height:100%;
+}
+
+.content img{
+	display:none;
+	height:100%;
+}
+/*smaller-screen layout*/
+
+@media all and (max-width: 800px) {}
