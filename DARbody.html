@@ -4,8 +4,8 @@
 		<div id="menuContainer">
 			<a id="a-wego" class="mlink" onclick="change(this)" href="#">we <b>go</b></a>
 			<a id="a-housecalls" class="mlink" onclick="change(this)" href="#">we make <b>house calls</b></a>
-			<a id="a-healthsystems" class="mlink" onclick="change(this)" href="#">we build <strong>health systems</strong></a>
-			<a id="a-westay" class="mlink" onclick="change(this)" href="#">we <strong>stay</strong></a>
+			<a id="a-healthsystems" class="mlink" onclick="change(this)" href="#">we build <b>health systems</b></a>
+			<a id="a-westay" class="mlink" onclick="change(this)" href="#">we <b>stay</b></a>
  
 		</div>
 		<!--menuContainer-->
@@ -17,47 +17,4 @@
 	<!--overallcontainer-->
 </div>
 <!--contentArea-->
-
-<script>
-function change(e) {
-	
-	var mlinks = document.getElementsByClassName("mlink");
-	var mbg = document.getElementById('menuContainer');
-	for (i = 0; i <= mlinks.length; i++) {
-		//unset all other font sizes
-		if (mlinks[i].innerHTML != e.innerHTML) {
-			mlinks[i].style.fontSize = "2em";
-			mlinks[i].style.opacity = ".5";
-			//mlinks[i].style.lineHeight="2em";
-		} else {
-			//set current link style
-			e.style.fontSize = "3.3em";
-			//e.style.lineHeight="1em";
-			e.style.opacity = "1";
-			switchColors(e);
-
-		}
-	}
-
-}
-
-function switchColors(c) {
-	var mc = document.getElementById('menuContainer');
-	c.style.color = "#fff";
-	switch (c.id) {
-		case "a-wego":
-			mc.style.backgroundColor = "#F8971d";
-			break;
-		case "a-housecalls":
-			mc.style.backgroundColor = "#008ea0";
-			break;
-		case "a-healthsystems":
-			mc.style.backgroundColor = "#f6be00";
-			break;
-		case "a-westay":
-			mc.style.backgroundColor = "#323372";
-			break;
-	}
-
-}
-</script>
+<script src="http://codepen.io/adamb_83/pen/wMpNgE.js"></script>
