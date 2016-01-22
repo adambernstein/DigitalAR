@@ -1,53 +1,63 @@
-<div class="overall-container">
-
-	<div class="nav-panel">
-	
-		<div class="item-container">
-			<a id="wego" class="nav-item" href="#t_wego">
-				<h2>we <b>go</b></h2>
-				<h3>Partners In Health works in remote places where health care is limited or barely exists.</h3>
-			</a>
-		</div>	
-		
-		<div class="item-container">
-			<a id="housecalls" class="nav-item" href="#t_housecalls">
-				<h2>we make <b>house calls</b></h2>
-				<h3>Partners In Health visits patients in their homes to deliver medication and guide them through treatment.</h3>
-			</a>
+<div id="contentArea">
+	<!--simulates the PIH content area framework-->
+	<div id="overallContainer">
+		<div id="menuContainer">
+			<a id="a-wego" class="mlink" onclick="change(this)" href="#">we <b>go</b></a>
+			<a id="a-housecalls" class="mlink" onclick="change(this)" href="#">we make <b>house calls</b></a>
+			<a id="a-healthsystems" class="mlink" onclick="change(this)" href="#">we build <strong>health systems</strong></a>
+			<a id="a-westay" class="mlink" onclick="change(this)" href="#">we <strong>stay</strong></a>
+ 
 		</div>
-		
-		<div class="item-container">
-			<a id="healthsystems" class="nav-item" href="#t_healthsystems">
-				<h2>we build <strong>health systems</strong></h2>
-				<h3>Partners In Health works closely with national governments and other partners to improve and expand health services.</h3>
-			</a>
+		<!--menuContainer-->
+		<div id="contentArea">
+			<img src="http://act.pih.org/page/-/annual-report/2015/img/SierraLeone_0115_Maforki_rrollins_432_we_go.jpg" alt="" />
 		</div>
-		
-		<div class="item-container">
-			<a id="westay" class="nav-item" href="#t_westay">
-				<h2>we <strong>stay</strong></h2>
-				<h3>Partners In Health makes long-term commitments to the communities we serve.</h3>
-			</a>
-		</div>
-
-
-	</div><!--nav-panel-->
-	
-	<div class="content-panel">
-	
-		<div id="t_wego" class = "content-item"><img src="http://act.pih.org/page/-/annual-report/2015/img/SierraLeone_0115_Maforki_rrollins_432_we_go.jpg" alt="" />
-		</div>
-		
-		<div id="t_housecalls" class = "content-item"><img src="http://act.pih.org/page/-/annual-report/2015/img/Rwanda_0915_AMukamana_CAvila_53_housecalls.jpg" alt="" />
-		</div>
-		
-		<div id="t_healthsystems" class = "content-item"><img src="http://act.pih.org/page/-/annual-report/2015/img/Mexico_0815_SoledadHPLuz_CAvila_019_healthsystems.jpg" alt="" />
-		</div>
-		
-		<div id="t_westay" class = "content-item"><img src="http://act.pih.org/page/-/annual-report/2015/img/Haiti_0915_Cardiac_rrollins_049_we_stay.jpg" alt="" />
-		</div>
-		
+		<!--contentarea-->
 	</div>
+	<!--overallcontainer-->
+</div>
+<!--contentArea-->
 
+<script>
+function change(e) {
+	
+	var mlinks = document.getElementsByClassName("mlink");
+	var mbg = document.getElementById('menuContainer');
+	for (i = 0; i <= mlinks.length; i++) {
+		//unset all other font sizes
+		if (mlinks[i].innerHTML != e.innerHTML) {
+			mlinks[i].style.fontSize = "2em";
+			mlinks[i].style.opacity = ".5";
+			//mlinks[i].style.lineHeight="2em";
+		} else {
+			//set current link style
+			e.style.fontSize = "3.3em";
+			//e.style.lineHeight="1em";
+			e.style.opacity = "1";
+			switchColors(e);
 
-</div><!--overall-container-->
+		}
+	}
+
+}
+
+function switchColors(c) {
+	var mc = document.getElementById('menuContainer');
+	c.style.color = "#fff";
+	switch (c.id) {
+		case "a-wego":
+			mc.style.backgroundColor = "#F8971d";
+			break;
+		case "a-housecalls":
+			mc.style.backgroundColor = "#008ea0";
+			break;
+		case "a-healthsystems":
+			mc.style.backgroundColor = "#f6be00";
+			break;
+		case "a-westay":
+			mc.style.backgroundColor = "#323372";
+			break;
+	}
+
+}
+</script>
