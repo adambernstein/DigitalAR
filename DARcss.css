@@ -60,7 +60,9 @@ article.base{
 }
 
 /**CUSTOM **/
-/**{font-family: 'Fira Sans', sans-serif;}*/
+/** {
+	font-family: 'Fira Sans', sans-serif;
+}*/
 
 .contentArea {
 	margin: 0 auto;
@@ -89,7 +91,7 @@ article.base{
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
 	align-items: stretch;
-	position:relative;
+	position: relative;
 }
 
 #menuContainer {
@@ -106,7 +108,6 @@ article.base{
 	min-height: 500px;
 	background: #eee;
 	transition: background-color .7s;
-	
 	/*initial state*/
 	background-color: #F8971D;
 }
@@ -126,9 +127,10 @@ article.base{
 	background: #555;
 	/*width: 100%;*/
 	margin: 0 auto;
-	max-width: 500px;	
+	max-width: 500px;
 	/*height: 500px;*/
 	overflow: hidden;
+	position:relative;
 }
 
 #menuContainer a {
@@ -142,13 +144,15 @@ article.base{
 	padding: 10px;
 }
 
-.linkbox{
-	padding:56px;
+.linkbox {
+	padding: 56px;
 }
 
-.linkbox a{
-	cursor:pointer;
+.linkbox a {
+	cursor: pointer;
 }
+
+
 /*#menuContainer a:hover{
 	font-size:3.8em;
 	opacity:1;
@@ -185,36 +189,42 @@ article.base{
 }*/
 
 #contentContainer img {
-	position: absolute;
-	/*width: 500px;
-	top: 8px;
+	/*position: absolute;*/
+	width: 500px;
+	/*top: 8px;
 	transition:opacity .7s;*/
-	opacity:1;
+	opacity: 1;
 }
-#contentContainer a{
+
+#contentContainer a {
+	position:absolute;
 	transition: opacity .7s;
 }
 
 #contentContainer img:nth-child(1) {
-	/*default state*/
-	z-index:101;
+	/*default state
+	z-index: 1001;*/
 }
 
-.more-buttn{
-	
-	color:#fff;
-	font-size:1.5em;
-	position:absolute;
-	z-index:1200;
-	bottom:10px;
-	background:rgba(248, 151, 29,.8);
-	box-shadow:8px 8px 5px #222;
-	padding:5px 10px;
-	right:10px;
-	border-radius:10px;
-	border:solid 2px #e68d1f;
+.more-buttn {
+	color: #fff;
+	font-size: 1.5em;
+	position: absolute;
+	z-index: 10000;
+	top: 430px;
+	width:155px;
+	/*background: rgba(248, 151, 29, .8);*/
+	box-shadow: 8px 8px 5px #222;
+	padding: 5px 10px;
+	left: 290px;
+	border-radius: 10px;
+	border: solid 2px #b0a69e;
 }
 
-.more-buttn::after{
+.more-buttn::after {
 	content: "\25B8";
 }
+#b-wego {background-color:rgba(248, 151, 29, .8);}
+#b-housecalls {background-color:rgba(0,142,160,.8)}
+#b-healthsystems {background-color:rgba(246,190,0,.8)}
+#b-westay {background-color:rgba(50,51,114,.8)}
