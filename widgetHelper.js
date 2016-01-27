@@ -6,7 +6,7 @@ function change(e) {
 	for (i = 0; i < mlinks.length; i++) {
 		//unset all other font sizes
 		if (mlinks[i].innerHTML != e.innerHTML) {
-			mlinks[i].style.fontSize = "2.2em";
+			mlinks[i].style.fontSize = "2em";
 			mlinks[i].style.opacity = ".5";
 			//mlinks[i].style.lineHeight="2em";
 		} else {
@@ -24,9 +24,9 @@ function change(e) {
 function switchColors(c) {
 	var mc = document.getElementById('menuContainer');
 	var ca = document.getElementById('contentContainer').children;
-	var currentIndex = (function(){
+	var currentIndex = (function() {
 		switch (c.id) {
-			case "a-wego":	
+			case "a-wego":
 				return 0;
 				break;
 			case "a-housecalls":
@@ -40,18 +40,16 @@ function switchColors(c) {
 				break;
 		}
 	})();
-	
-	
-	for (y=0;y<ca.length;y++){
-		if (y!=currentIndex){
-			ca[y].style.opacity="0";
-			ca[y].style.zIndex="0";
+
+	for (y = 0; y < ca.length; y++) {
+		if (y != currentIndex) {
+			ca[y].style.opacity = "0";
+			ca[y].style.zIndex = "0";
+		} else {
+			ca[y].style.zIndex = "4";
+			ca[y].style.opacity = "1";
 		}
-		else {
-			ca[y].style.zIndex="4";
-			ca[y].style.opacity="1";
-		}
-		switch (currentIndex){
+		switch (currentIndex) {
 			case 0:
 				mc.style.backgroundColor = "#F8971d";
 				break;
@@ -66,7 +64,7 @@ function switchColors(c) {
 				break;
 		}
 	}
-	
+
 	/* old **
 	switch (c.id) {
 		case "a-wego":

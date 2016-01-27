@@ -145,7 +145,7 @@ article.base{
 }
 
 .linkbox {
-	padding: 56px;
+	padding: 54px 69px;
 }
 
 .linkbox a {
@@ -192,13 +192,13 @@ article.base{
 	/*position: absolute;*/
 	width: 500px;
 	/*top: 8px;
-	transition:opacity .7s;*/
+	transition:all .7s;*/
 	opacity: 1;
 }
 
 #contentContainer a {
 	position:absolute;
-	transition: opacity .7s;
+	transition: all .7s;
 }
 
 #contentContainer img:nth-child(1) {
@@ -225,6 +225,6 @@ article.base{
 	content: "\25B8";
 }
 #b-wego {background-color:rgba(248, 151, 29, .8);}
-#b-housecalls {background-color:rgba(0,142,160,.8)}
-#b-healthsystems {background-color:rgba(246,190,0,.8)}
-#b-westay {background-color:rgba(50,51,114,.8)}
+#b-housecalls {background-color:rgba(0,142,160,.8); z-index:0; }
+#b-healthsystems {background-color:rgba(246,190,0,.8); z-index:0;}
+#b-westay {background-color:rgba(50,51,114,.8); z-index:0;}
