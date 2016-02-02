@@ -228,3 +228,20 @@ article.base{
 #b-housecalls {background-color:rgba(0,142,160,.8); z-index:0; }
 #b-healthsystems {background-color:rgba(246,190,0,.8); z-index:0;}
 #b-westay {background-color:rgba(50,51,114,.8); z-index:0;}
+
+/***Mobile***/
+@media screen and (max-width:1000px){
+	#overallContainer{
+		flex-direction:column;
+		flex-wrap:wrap;
+	}
+	#menuContainer{
+		font-size:8px;
+		min-height:100px;
+	}
+	
+	.linkbox{
+		padding:20px;
+	}
+	
+}
