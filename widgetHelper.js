@@ -2,17 +2,19 @@ function change(e) {
 
 	var mlinks = document.getElementsByClassName("mlink");
 	var mbg = document.getElementById('menuContainer');
-
+   ////pause animation///
+	// object.style.animationPlayState="paused" 
 	for (i = 0; i < mlinks.length; i++) {
 		//unset all other font sizes
 		if (mlinks[i].innerHTML != e.innerHTML) {
 			mlinks[i].style.fontSize = "2em";
-			mlinks[i].style.opacity = ".5";
+			mlinks[i].style.opacity = ".6";
 			//mlinks[i].style.lineHeight="2em";
+			
 		} else {
 			//set current link style
 			e.style.fontSize = "3.3em";
-			//e.style.lineHeight="1em";
+			//e.style.lineHeight=".8em";
 			e.style.opacity = "1";
 			switchColors(e);
 
