@@ -134,6 +134,7 @@ article.base{
 
 #menuContainer a {
 	display: block;
+	position:relative;
 	line-height: 1em;
 	font-size: 2em;
 	transition: all .3s;
@@ -149,9 +150,9 @@ article.base{
 	/* 	list-style-type:disc; */
 }
 
-#menuContainer a::before {
+.f-arrow::before {
 	content: "\25B8";
-}
+} 
 
 .linkbox {
 	padding: 35px;
@@ -169,10 +170,10 @@ article.base{
 
 
 /*initial state*/
-
 #menuContainer a:nth-child(1) {
 	font-size: 3.3em;
 	opacity: 1;
+	right:20px;
 	/* 	background-color:#f8971d */
 }
 
@@ -238,15 +239,15 @@ article.base{
 
 .more-buttn {
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	position: absolute;
 	z-index: 10000;
-	top: 430px;
-	width: 155px;
+	top: 435px;
+	width: 125px;
 	/*background: rgba(248, 151, 29, .8);*/
-	box-shadow: 8px 8px 5px #222;
+	box-shadow: 8px 8px 10px #222;
 	padding: 5px 10px;
-	right: 290px;
+	right: 10px;
 	border-radius: 10px;
 	border: solid 2px #b0a69e;
 }
@@ -286,10 +287,18 @@ article.base{
 		flex-wrap: wrap;
 	}
 	#menuContainer {
-		font-size: 8px;
+		font-size: 7px;
 		min-height: 100px;
 		min-width: 320px;
 	}
+	#menuContainer a{
+/* 		position:relative; */
+		margin-left:20px;
+	}
+	#menuContainer a::before {
+		content: "";
+	}
+	
 	#contentContainer {
 		min-width: 320px;
 		min-height: 320px;
@@ -298,7 +307,7 @@ article.base{
 		width: 320px;
 	}
 	.linkbox {
-		padding: 20px;
+		padding: 20px 10px;
 	}
 	#stContainer{
 		display:none;
@@ -306,7 +315,7 @@ article.base{
 	.more-buttn {
 		position: absolute;
 		top: 270px;
-		left: 10px;
+		left: 15px;
 		font-size:1em;
 		width:108px;
 	}

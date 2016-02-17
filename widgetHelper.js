@@ -11,10 +11,14 @@ function change(e) {
 			mlinks[i].style.fontSize = "2em";
 			mlinks[i].style.opacity = ".6";
 			//mlinks[i].style.lineHeight="2em";
+			mlinks[i].style.right = "0";
+			mlinks[i].classList.remove("f-arrow");
 
 		} else {
 			//set current link style
+			e.classList.add("f-arrow");
 			e.style.fontSize = "3.3em";
+			e.style.right = "20px";
 			//e.style.lineHeight=".8em";
 			e.style.opacity = "1";
 			switchColors(e);
@@ -47,13 +51,14 @@ function switchColors(c) {
 	})();
 
 	for (y = 0; y < ca.length; y++) {
+		//if not active
 		if (y != currentIndex) {
 			ca[y].style.opacity = "0";
-			ca[y].style.zIndex = "0";
+			ca[y].style.zIndex = "0";			
 			st[y].style.display="none";
 		} else {
 			ca[y].style.zIndex = "4";
-			ca[y].style.opacity = "1";
+			ca[y].style.opacity = "1";			
 			st[y].style.display="inline";
 		}
 		//switches colors 
