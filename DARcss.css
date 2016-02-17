@@ -63,6 +63,9 @@ article.base{
 /** {
 	font-family: 'Fira Sans', sans-serif;
 }*/
+* {
+	font-family: 'Fira Sans', sans-serif;
+}
 
 .contentArea {
 	margin: 0 auto;
@@ -95,8 +98,8 @@ article.base{
 }
 
 #menuContainer {
-	-webkit-order: 0;
-	-ms-flex-order: 0;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
 	order: 1;
 	-webkit-flex: 2 1 auto;
 	-ms-flex: 2 1 auto;
@@ -112,8 +115,8 @@ article.base{
 }
 
 #contentContainer {
-	-webkit-order: 1;
-	-ms-flex-order: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
 	order: 0;
 	-webkit-flex: 2 1 auto;
 	-ms-flex: 2 1 auto;
@@ -283,7 +286,9 @@ article.base{
 	
 	#overallContainer {
 		flex-direction: column;
+		-webkit-flex-direction:column;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 	}
 	
 	#menuContainer{
@@ -319,6 +324,7 @@ article.base{
 	#contentContainer {
 		min-width: 320px;
 		min-height: 320px;
+		margin:0;
 	}
 	#contentContainer img {
 		width: 320px;
