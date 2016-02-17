@@ -155,7 +155,7 @@ article.base{
 } 
 
 .linkbox {
-	padding: 35px;
+	padding: 35px 60px 35px 35px;
 }
 
 .linkbox a {
@@ -275,17 +275,34 @@ article.base{
 	z-index: 0;
 }
 
-
-/***Mobile***/
-
+/***tablet/mobile landscape**/
 @media screen and (max-width:1000px) {
 	.contentArea {
 		width: auto;
 	}
+	
 	#overallContainer {
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
+	
+	#menuContainer{
+		font-size: 12px;
+		min-height: 300px;
+		min-width: 500px;
+	}
+	.linkbox{
+		max-width:320px;
+	}
+	#stContainer{
+		display:none;
+	}
+	
+}
+/***Mobile***/
+
+@media screen and (max-width:500px) {
+		
 	#menuContainer {
 		font-size: 7px;
 		min-height: 100px;
@@ -309,9 +326,7 @@ article.base{
 	.linkbox {
 		padding: 20px 10px;
 	}
-	#stContainer{
-		display:none;
-	}
+	
 	.more-buttn {
 		position: absolute;
 		top: 270px;
