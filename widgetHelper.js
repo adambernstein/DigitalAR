@@ -4,8 +4,7 @@ function change(e) {
 
 	var mlinks = document.getElementsByClassName("mlink");
 	var mbg = document.getElementById('menuContainer');
-	////pause animation///
-	// object.style.animationPlayState="paused" 
+
 	for (i = 0; i < mlinks.length; i++) {
 		//unset all other font sizes
 		if (mlinks[i].innerHTML != e.innerHTML) {
@@ -28,6 +27,7 @@ function change(e) {
 function switchColors(c) {
 	var mc = document.getElementById('menuContainer');
 	var ca = document.getElementById('contentContainer').children;
+	var st = document.getElementById('stContainer').children;
 	//global variable currentIndex//
 	currentIndex = (function() {
 		switch (c.id) {
@@ -50,10 +50,13 @@ function switchColors(c) {
 		if (y != currentIndex) {
 			ca[y].style.opacity = "0";
 			ca[y].style.zIndex = "0";
+			st[y].style.display="none";
 		} else {
 			ca[y].style.zIndex = "4";
 			ca[y].style.opacity = "1";
+			st[y].style.display="inline";
 		}
+		//switches colors 
 		switch (currentIndex) {
 			case 0:
 				mc.style.backgroundColor = "#F8971d";

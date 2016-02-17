@@ -139,17 +139,17 @@ article.base{
 	transition: all .3s;
 	color: #fff;
 	opacity: .6;
-/* 	text-decoration: underline dashed #323372;  */
-	padding:10px 10px 0px 10px;
-	margin-bottom:0px;
-	border:0px solid #b0a69e;
-	border-radius:10px;
-/* 	box-shadow:3px 3px 8px #222;   */
-/* 	background-color:rgba(10,10,10,.6); */
-/* 	list-style-type:disc; */
+	/* 	text-decoration: underline dashed #323372;  */
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 0px;
+	border: 0px solid #b0a69e;
+	border-radius: 10px;
+	/* 	box-shadow:3px 3px 8px #222;   */
+	/* 	background-color:rgba(10,10,10,.6); */
+	/* 	list-style-type:disc; */
 }
 
-#menuContainer a::before{
+#menuContainer a::before {
 	content: "\25B8";
 }
 
@@ -173,22 +173,22 @@ article.base{
 #menuContainer a:nth-child(1) {
 	font-size: 3.3em;
 	opacity: 1;
-/* 	background-color:#f8971d */
+	/* 	background-color:#f8971d */
 }
 
 #menuContainer a:focus {
 	outline: none;
 }
 
-
-
-#menuContainer a:nth-child(2){
-/* background-color:#008EA0;  */
+#menuContainer a:nth-child(2) {
+	/* background-color:#008EA0;  */
 }
 
-#menuContainer a:nth-child(3){
-/* background-color:#F6BE00;  */
+#menuContainer a:nth-child(3) {
+	/* background-color:#F6BE00;  */
 }
+
+
 /*
 #menuContainer a:nth-child(4){
 	color:#323372;
@@ -197,6 +197,26 @@ article.base{
 /*#menuContainer:nth-child(2){
 	color:#008ea0;
 }*/
+
+#stContainer {
+	margin: 0 10px 0 60px;
+	padding-right:15px;
+}
+
+#stContainer p {
+	color: #fff;
+	opacity:.9;
+	position: absolute;
+	bottom: 10px;
+	display: none;
+	width:420px;
+}
+
+
+/* default state */
+#s-wego {
+/* 	display: inline !important; */
+}
 
 #contentContainer img {
 	/*position: absolute;*/
@@ -258,8 +278,8 @@ article.base{
 /***Mobile***/
 
 @media screen and (max-width:1000px) {
-	.contentArea{
-		width:auto; 
+	.contentArea {
+		width: auto;
 	}
 	#overallContainer {
 		flex-direction: column;
@@ -268,22 +288,26 @@ article.base{
 	#menuContainer {
 		font-size: 8px;
 		min-height: 100px;
-		min-width:320px;
+		min-width: 320px;
 	}
-	#contentContainer{
-		min-width:320px;
-		min-height:320px;
+	#contentContainer {
+		min-width: 320px;
+		min-height: 320px;
 	}
-	#contentContainer img{
-		width:320px;
+	#contentContainer img {
+		width: 320px;
 	}
-	
 	.linkbox {
 		padding: 20px;
 	}
-	.more-buttn{
-		position:absolute;
-		top:250px;
-		left:10px;
+	#stContainer{
+		display:none;
+	}
+	.more-buttn {
+		position: absolute;
+		top: 270px;
+		left: 10px;
+		font-size:1em;
+		width:108px;
 	}
 }
