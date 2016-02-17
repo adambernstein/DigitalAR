@@ -1,8 +1,10 @@
+var currentIndex = 0;
+
 function change(e) {
 
 	var mlinks = document.getElementsByClassName("mlink");
 	var mbg = document.getElementById('menuContainer');
-   ////pause animation///
+	////pause animation///
 	// object.style.animationPlayState="paused" 
 	for (i = 0; i < mlinks.length; i++) {
 		//unset all other font sizes
@@ -10,7 +12,7 @@ function change(e) {
 			mlinks[i].style.fontSize = "2em";
 			mlinks[i].style.opacity = ".6";
 			//mlinks[i].style.lineHeight="2em";
-			
+
 		} else {
 			//set current link style
 			e.style.fontSize = "3.3em";
@@ -26,7 +28,8 @@ function change(e) {
 function switchColors(c) {
 	var mc = document.getElementById('menuContainer');
 	var ca = document.getElementById('contentContainer').children;
-	var currentIndex = (function() {
+	//global variable currentIndex//
+	currentIndex = (function() {
 		switch (c.id) {
 			case "a-wego":
 				return 0;
@@ -67,36 +70,41 @@ function switchColors(c) {
 		}
 	}
 
-	/* old **
-	switch (c.id) {
-		case "a-wego":
-			mc.style.backgroundColor = "#F8971d";
-			ca[0].style.opacity="1";
-			ca[0].style.zIndex="4";
-			ca[1].style.opacity="0";
-			ca[2].style.opacity="0";
-			ca[3].style.opacity="0";
+}
+
+function autoRotate() {
+	//timing funct
+	var p = document.getElementById('a-wego');
+	var q = document.getElementById('a-housecalls');
+	var r = document.getElementById('a-healthsystems');
+	var s = document.getElementById('a-westay');
+
+	switch (currentIndex) {
+		case 0:
+			change(q);
 			break;
-		case "a-housecalls":
-			mc.style.backgroundColor = "#008ea0";
-			ca[1].style.opacity="1";
-			ca[0].style.opacity="0";			
-			ca[2].style.opacity="0";
-			ca[3].style.opacity="0";
+		case 1:
+			change(r);
 			break;
-		case "a-healthsystems":
-			mc.style.backgroundColor = "#f6be00";
-			ca[2].style.opacity="1";
-			ca[0].style.opacity="0";
-			ca[1].style.opacity="0";			
-			ca[3].style.opacity="0";
+		case 2:
+			change(s);
 			break;
-		case "a-westay":
-			mc.style.backgroundColor = "#323372";
-			ca[3].style.opacity="1";
-			ca[0].style.opacity="0";
-			ca[1].style.opacity="0";
-			ca[2].style.opacity="0";			
+		case 3:
+			change(p);
 			break;
-	}*/
+	}
+}
+
+function autoTrigger() {
+	var interval = setInterval(autoRotate, 2500);
+	document.getElementById('overallContainer').addEventListener('mouseover', function() {
+		clearInterval(interval)
+	});
+	document.getElementById('overallContainer').addEventListener('click', function() {
+		clearInterval(interval)
+	});
+	document.getElementById('overallContainer').addEventListener('mouseout', function() {
+		interval = setInterval(autoRotate, 2500)
+	});
+
 }

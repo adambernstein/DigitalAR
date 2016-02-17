@@ -226,7 +226,7 @@ article.base{
 	/*background: rgba(248, 151, 29, .8);*/
 	box-shadow: 8px 8px 5px #222;
 	padding: 5px 10px;
-	left: 290px;
+	right: 290px;
 	border-radius: 10px;
 	border: solid 2px #b0a69e;
 }
