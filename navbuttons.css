@@ -1,0 +1,40 @@
+.navbuttons{
+	position:relative;
+	padding:12px;
+}
+
+.more-buttn {
+	color: #fff !important;
+	display: inline;
+	font-size: 1.2em;
+	position: absolute;
+	z-index: 10000;
+	width: auto;
+	box-shadow: 2px 2px 4px #333;
+	padding: 5px 10px;
+	border-radius: 2px;
+	/* opacity: .9; */
+}
+
+.more-buttn:hover{
+	color:#fff;
+	/* border: solid 1px #b0a69e; */
+}
+
+#mb-prev{
+	background: #F6BE00;
+	left:10px;
+}
+
+#mb-prev::before{
+	content: "\25C2";
+}
+
+#mb-next{
+	background:#555;
+	right:10px;
+
+}
+#mb-next::after{
+	content: "\25B8";
+}
