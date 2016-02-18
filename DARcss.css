@@ -324,7 +324,7 @@ article.base{
 	
 	#contentContainer {
 		min-width: 320px;
-		min-height: 320px;
+		min-height: 300px;
 		margin:0;
 	}
 	#contentContainer img {
@@ -336,7 +336,7 @@ article.base{
 	
 	.more-buttn {
 		position: absolute;
-		top: 270px;
+		top: 250px;
 		left: 15px;
 		font-size:1em;
 		width:108px;
