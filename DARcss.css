@@ -29,6 +29,7 @@ body{background-color:#fff;}
 	margin:0;
 	background:transparent;
 	border:none;
+	padding-bottom:0 !important;
 }
 
 article .main-content p{
