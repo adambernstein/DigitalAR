@@ -63,9 +63,6 @@ article.base{
 /** {
 	font-family: 'Fira Sans', sans-serif;
 }*/
-* {
-	font-family: 'Fira Sans', sans-serif;
-}
 
 .contentArea {
 	margin: 0 auto;
@@ -278,7 +275,7 @@ article.base{
 	z-index: 0;
 }
 
-/***tablet/mobile landscape**/
+/***tablet and mobile landscape**/
 @media screen and (max-width:1000px) {
 	.contentArea {
 		width: auto;
@@ -301,6 +298,10 @@ article.base{
 	}
 	#stContainer{
 		display:none;
+	}
+	
+	#contentContainer{
+		margin:0;
 	}
 	
 }
