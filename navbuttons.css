@@ -38,3 +38,9 @@
 #mb-next::after{
 	content: "\25B8";
 }
+
+@media screen and (max-width:500px) {
+	.more-buttn{
+		font-size:.9em
+	}
+}
